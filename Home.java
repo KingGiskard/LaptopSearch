@@ -13,22 +13,22 @@ public class Home extends javax.swing.JFrame
     {
         initComponents();
     }
-    
-    private boolean saveExsist;       
+
+    private boolean saveExsist;
     Search finder;
     SearchView LaptopList ;
     AddLaptop newLaptop;
     LaptopReturn lReturn;
     WindowFunction windowListen;
-    
-    
+
+
     //varibles for gui
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.ButtonGroup buttonGroup2;
     private javax.swing.ButtonGroup buttonGroup3;
     private javax.swing.ButtonGroup buttonGroup5;
     private javax.swing.JButton jButton1;
-    
+
     private javax.swing.JCheckBox jCheckBox1;
     private javax.swing.JList jList1;
     private javax.swing.JMenu jMenu1;
@@ -58,20 +58,20 @@ public class Home extends javax.swing.JFrame
     private javax.swing.JRadioButton jRadioButton8;
     private javax.swing.JRadioButton jRadioButton9;
     private javax.swing.JScrollPane jScrollPane1;
-   
-    
-    
-   
-    
-    
+
+
+
+
+
+
     private void initComponents() {
      load();// get save
-     
+
      //initialize field varibles
      LaptopList = new SearchView(finder.Storage,this);
      newLaptop = new AddLaptop(finder,this);
      windowListen = new WindowFunction(this);
-     
+
         buttonGroup1 = new javax.swing.ButtonGroup();
         buttonGroup2 = new javax.swing.ButtonGroup();
         buttonGroup3 = new javax.swing.ButtonGroup();
@@ -96,7 +96,7 @@ public class Home extends javax.swing.JFrame
         jPanel4 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jList1 = new javax.swing.JList();
-        
+
         jPanel5 = new javax.swing.JPanel();
         jRadioButton12 = new javax.swing.JRadioButton();
         jRadioButton13 = new javax.swing.JRadioButton();
@@ -107,11 +107,11 @@ public class Home extends javax.swing.JFrame
         jMenuItem2 = new javax.swing.JMenuItem();
         jMenuItem3 = new javax.swing.JMenuItem();
         jMenuItem4 = new javax.swing.JMenuItem();
-        
+
         buttonGroup1 = new javax.swing.ButtonGroup();
         buttonGroup2 = new javax.swing.ButtonGroup();
         buttonGroup3 = new javax.swing.ButtonGroup();
-        
+
         jPopupMenu1 = new javax.swing.JPopupMenu();
         jPanel1 = new javax.swing.JPanel();
         jRadioButton3 = new javax.swing.JRadioButton();
@@ -136,26 +136,26 @@ public class Home extends javax.swing.JFrame
         jMenu1 = new javax.swing.JMenu();
         jMenuItem1 = new javax.swing.JMenuItem();
         jMenuItem2 = new javax.swing.JMenuItem();
-        
+
         addWindowListener(windowListen);
 
-        
+
         //formating for gui
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Ram", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, null, java.awt.Color.black));
-        jPanel1.setName("Ram"); 
+        jPanel1.setName("Ram");
 
         buttonGroup1.add(jRadioButton3);
         jRadioButton3.setText("<4 GB");
 
         buttonGroup1.add(jRadioButton2);
         jRadioButton2.setText(">8 GB");
-        
+
 
         buttonGroup1.add(jRadioButton1);
         jRadioButton1.setText("4 - 8 GB");
-        
+
 
         buttonGroup1.add(jRadioButton10);
         jRadioButton10.setText("N/A");
@@ -227,9 +227,9 @@ public class Home extends javax.swing.JFrame
                     .addComponent(jRadioButton11))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-        
 
-        
+
+
         jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "USB Ports", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, null, java.awt.Color.black));
 
         buttonGroup3.add(jRadioButton7);
@@ -237,7 +237,7 @@ public class Home extends javax.swing.JFrame
 
         buttonGroup3.add(jRadioButton8);
         jRadioButton8.setText(">=3");
-        
+
 
         buttonGroup3.add(jRadioButton9);
         jRadioButton9.setText("N/A");
@@ -269,7 +269,7 @@ public class Home extends javax.swing.JFrame
         jCheckBox1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jCheckBox1.setText("Available");
         jCheckBox1.setSelected(true);
-        
+
 
         jButton1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
          jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -277,7 +277,7 @@ public class Home extends javax.swing.JFrame
                 jButton1ActionPerformed(evt);
             }
         });
-        
+
         jButton1.setText("Search");
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
@@ -297,7 +297,7 @@ public class Home extends javax.swing.JFrame
             public Object getElementAt(int i) { return strings[i]; }
         });
         jScrollPane1.setViewportView(LaptopList);
-        
+
         jPanel5.setBorder(javax.swing.BorderFactory.createTitledBorder("Output"));
 
         buttonGroup5.add(jRadioButton12);
@@ -344,7 +344,7 @@ public class Home extends javax.swing.JFrame
             }
         });
 
-        
+
         jMenuItem2.setText(("Return Laptop"));
         jMenu1.add(jMenuItem2);
         jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
@@ -352,8 +352,8 @@ public class Home extends javax.swing.JFrame
                 jMenuItem2ActionPerformed(evt);
             }
         });
-        
-        
+
+
         jMenuItem3.setText("Delete Laptop");
         jMenu1.add(jMenuItem3);
         jMenuItem3.addActionListener(new java.awt.event.ActionListener() {
@@ -361,7 +361,7 @@ public class Home extends javax.swing.JFrame
                 jMenuItem3ActionPerformed(evt);
             }
         });
-        
+
         jMenuItem4.setText("See Users");
         jMenu1.add(jMenuItem4);
         jMenuItem4.addActionListener(new java.awt.event.ActionListener() {
@@ -424,24 +424,24 @@ public class Home extends javax.swing.JFrame
         );
 
         pack();
-        
+
         //automatically shows which laptops are available
         Search();
-       
+
     }
-    
-     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt)//when search button clicked 
-     { 
-        Search();        
+
+     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt)//when search button clicked
+     {
+        Search();
     }
-     
-     
+
+
      public void Search()
      {
         finder.reset();
-        
+
         finder.AvailableSearch(jCheckBox1.isSelected());
-        
+
          String output;
          if(jRadioButton12.isSelected())
              output= "VGA";
@@ -451,8 +451,8 @@ public class Home extends javax.swing.JFrame
              output="";
          if(!output.equals(""))
          finder.OutputSearch(output);
-         
-         
+
+
          int ram = -1;
          if(jRadioButton3.isSelected())
              ram=0;
@@ -466,7 +466,7 @@ public class Home extends javax.swing.JFrame
              ram=-1;
          if(ram!=-1)
          finder.RamSearch(ram);
-         
+
          String media ="";
          if(jRadioButton4.isSelected())
              media = "CD";
@@ -478,7 +478,7 @@ public class Home extends javax.swing.JFrame
              media="";
          if(!media.equals(""))
          finder.MediaSearch(media);
-         
+
          int USB= -1;
          if(jRadioButton7.isSelected())
              USB=2;
@@ -489,16 +489,16 @@ public class Home extends javax.swing.JFrame
          if(USB!=-1)
          finder.USBSearch(USB);
         LaptopList.repaintList(finder.getSearchList());
-         
+
         jScrollPane1.setViewportView(LaptopList);
      }
-     
+
      public void setSearchButton(boolean b)
      {
          jButton1.setEnabled(b);
      }
-     
-     
+
+
      public void save()//make sure save file is stored in same place as application
      {
          ArrayList<Laptop> storage = finder.getStorage();
@@ -506,29 +506,29 @@ public class Home extends javax.swing.JFrame
         {
         FileOutputStream saveFile = new FileOutputStream("laptopSearchSaveFile.sav");
         ObjectOutputStream save = new ObjectOutputStream(saveFile);
-        
+
         save.writeObject(storage);
         save.close();
         }
         catch(Exception exc)
                 {
-                    
+
                 }
      }
-     
+
      public void load()
      {
-         
-         ArrayList<Laptop> storage = null; 
+
+         ArrayList<Laptop> storage = null;
           try
         {
             FileInputStream saveFile = new FileInputStream("laptopSearchSaveFile.sav");
             ObjectInputStream save = new ObjectInputStream(saveFile);
-            
+
             storage = (ArrayList)save.readObject();
-            saveExsist=true;  
+            saveExsist=true;
         }
-          
+
         catch(Exception exc)
         {
             saveExsist = false;
@@ -538,50 +538,50 @@ public class Home extends javax.swing.JFrame
           else
               finder = new Search(new ArrayList());
      }
-     
+
      public Search getSearch()
      {
          return finder;
      }
-     
+
      private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt)//addLaptop
      {
       AddLaptop addition = new AddLaptop(finder,this);
       addition.add(finder,this);
      }
-     
+
      private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt)//returnLaptop
      {
       finder.reset();
       lReturn = new LaptopReturn(finder.AvailableSearch(false),this);
       lReturn.returnLaptop(finder.AvailableSearch(false),this);
      }
-     
+
      private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt)//deleteLaptop
      {
          DeleteLaptop delete = new DeleteLaptop(finder,this);
          delete.delete(finder,this);
      }
-     
+
      private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt)//deleteLaptop
      {
          SeeUsers UserInfo = new SeeUsers(finder);
          UserInfo.view(finder);
      }
-     
+
      public ArrayList<Laptop> getStorage()
      {
-         
+
          return finder.getStorage();
      }
 
-     
-     public static void main(String args[]) 
+
+     public static void main(String args[])
      {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html
          */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
@@ -601,12 +601,12 @@ public class Home extends javax.swing.JFrame
         }
         //</editor-fold>
         //</editor-fold>
-            
+
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new Home().setVisible(true);
             }
-        }); 
+        });
     }
 }
